@@ -194,7 +194,6 @@ func (s *Store) Commit() error {
 		es.FlushHeads()
 		es.FlushLastEvents()
 	}
-	s.evm.Flush()
 	return s.dbs.Flush(flushID)
 }
 
